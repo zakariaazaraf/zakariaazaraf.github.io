@@ -1,0 +1,569 @@
+* {
+  box-sizing: border-box;
+  color: #a6a6a6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 52px;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  font-weight: bold;
+  padding: 15px 0;
+  text-transform: capitalize;
+}
+
+/*  NAVIGATION SECTION */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  padding: 40px 50px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+nav > a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: auto 0;
+}
+
+nav ul li a {
+  color: #a6a6a6;
+  text-transform: uppercase;
+  padding: 0 15px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.homeBurger {
+  width: 25px;
+  background-color: #ddd;
+  height: 2px;
+  position: relative;
+  top: 11px;
+  display: none;
+}
+
+.homeBurger::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  box-shadow: 0 8px 0 0 #ddd, 0 16px 0 0 #ddd;
+}
+
+/********************************************************/
+
+/****************  START HOME SECTION   *****************/
+
+video {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: 0;
+}
+
+.home {
+  background-image: url("../../images/home-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #ddd;
+  z-index: 0;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.home .profil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 90%;
+  z-index: 222;
+}
+
+.home img {
+  border: 8px solid #555555;
+  border-radius: 50%;
+  width: 170px;
+}
+
+.home h1 {
+  margin-top: 17px;
+  font-weight: 900;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.home span {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  letter-spacing: 1.5px;
+  height: 50px;
+}
+
+.home .profession::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 120%;
+  width: 3px;
+  background-color: #a6a6a6;
+}
+
+.home h2 .profession {
+  transition: width 0.5s ease-in-out;
+  display: inline-block;
+  position: relative;
+}
+
+.home h2 .profession b {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.home h2 .profession .active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.home-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 10%;
+  width: 100%;
+  padding: 0 50px;
+}
+
+.home-footer .social-medias a {
+  color: #a6a6a6;
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.home-footer .social-medias a i {
+  cursor: pointer;
+}
+
+.home-footer .social-medias a i:hover {
+  cursor: pointer;
+}
+
+/********************************************************/
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  nav .homeBurger {
+    display: block;
+  }
+}
+
+@keyframes pushIt {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 180px;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/*********  STRAT ABOUT SECTION  *********/
+
+h1,
+h2,
+h3 {
+  color: #ddd;
+}
+
+p {
+  color: #a6a6a6;
+}
+
+.about,
+.works,
+.contact {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+}
+
+.about .container-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+}
+
+.about .container-section h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 52px;
+  letter-spacing: 1.5px;
+}
+
+.about .container-section > div {
+  padding: 30px 0 60px 0;
+}
+
+.about .container-section .about-resume {
+  display: flex;
+}
+
+.about .container-section .about-resume .image {
+  flex-basis: 40%;
+  padding: 0 15px;
+}
+
+.about .container-section .about-resume .image img {
+  width: 100%;
+  height: auto;
+  border: solid 8px #414141;
+}
+
+.about .container-section .about-resume .resume {
+  flex-basis: 60%;
+  padding: 0 15px;
+}
+
+.about .container-section .about-resume .resume h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.about .container-section .about-resume .resume p {
+  line-height: 2;
+}
+
+.about .container-section .about-resume .resume hr {
+  background-color: #a6a6a6;
+  opacity: 0.5;
+  margin: 40px 0 30px;
+}
+
+.about .container-section .about-resume .resume .informations {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about .container-section .about-resume .resume .informations > div {
+  flex-basis: 50%;
+}
+
+.about .container-section .about-resume .resume .informations span {
+  font-weight: bold;
+  padding-right: 4px;
+  text-transform: capitalize;
+}
+
+.about .container-section .about-resume .resume .buttons {
+  display: flex;
+  margin-top: 30px;
+}
+
+.about .container-section .about-resume .resume .buttons a {
+  text-decoration: none;
+  background-color: #111;
+  padding: 6px 30px;
+  border: 2px solid #a6a6a6;
+  border-radius: 20px;
+  color: #a6a6a6;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.about .container-section .about-resume .resume .buttons a:first-child {
+  margin-right: 30px;
+}
+
+.about .container-section .career {
+  display: flex;
+  justify-content: center;
+}
+
+.about .container-section .career > div {
+  flex-basis: 50%;
+}
+
+.about .container-section .career h2 {
+  font-weight: bold;
+  padding: 15px 0;
+  text-transform: capitalize;
+}
+
+.about .container-section .career > div div {
+  position: relative;
+  padding: 0 0 50px 40px;
+}
+
+.about .container-section .career > div div::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #111;
+  border: solid 2px #a6a6a6;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.about .container-section .career > div div::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  width: 1px;
+  height: 100%;
+  background-color: #a6a6a6;
+}
+
+.about .container-section .career div span i {
+  padding-right: 7px;
+}
+
+.about .container-section .skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.about .container-section .skills > div {
+  flex-basis: 50%;
+  padding: 15px;
+}
+
+.about .container-section .skills div > div {
+  height: 7px;
+  width: 100%;
+  background-color: #a6a6a6;
+  border-radius: 4px;
+}
+
+.about .container-section .skills div > span {
+  text-transform: uppercase;
+}
+
+.about .container-section .skills div div p {
+  height: 100%;
+  background-color: #424242;
+  border-radius: 3px;
+  margin: 1rem 0 0 0;
+  transition: width 1s ease;
+  position: relative;
+}
+
+.about .container-section .skills div div span {
+  position: absolute;
+  top: -37px;
+  left: 93%;
+  width: 32px;
+  height: 23px;
+  background-color: #424242;
+  font-size: 14px;
+  text-align: center;
+}
+
+/********************************************************/
+
+/**************** START WORKS SECTION *************/
+
+.works {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.works .container-section {
+  flex-basis: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.works .container-section .works-container {
+  display: flex;
+  justify-content: center;
+  flex-basis: 95%;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.works .container-section .works-container .column {
+  flex-basis: 33.33%;
+}
+
+.works .container-section .works-container .column .item {
+  margin: 15px 10px;
+}
+
+.works .container-section .works-container .column .item img {
+  width: 100%;
+  height: auto;
+}
+
+/**************** END WORKS SECTION *************/
+
+/**************** START CONTACT SECTION *************/
+.contact {
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.contact .wraper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact .contact-container {
+  flex-basis: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact .contact-container > div {
+  padding: 20px 25px;
+}
+
+.contact .contact-container .contact-form {
+  flex-basis: 58%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.contact .contact-container .contact-form div:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact .contact-container .contact-form div:first-child > input {
+  flex-basis: 48%;
+}
+
+.contact .contact-container .contact-form form {
+  width: 100%;
+}
+
+.contact .contact-container .contact-form form > div {
+  margin: 15px 0;
+}
+
+.contact .contact-container .contact-form form input,
+.contact .contact-container .contact-form form textarea {
+  background-color: transparent;
+  border-color: #4f4f4f;
+  transition: all 0.5s ease;
+  width: 100%;
+  height: 45px;
+  padding: 7px 10px;
+  outline: none;
+  border: 1px solid #4f4f4f;
+}
+
+.contact .contact-container .contact-form form input:focus,
+.contact .contact-container .contact-form form textarea:focus {
+  border: 1px solid #a6a6a6;
+}
+
+.contact .contact-container .contact-form form textarea {
+  height: 200px;
+}
+
+.contact .contact-container .contact-form form input[type="submit"] {
+  width: 27%;
+  height: 35px;
+  border: 2px solid #a6a6a6;
+  border-radius: 20px;
+}
+
+.contact .contact-container .contact-info {
+  flex-basis: 42%;
+}
+
+.contact .contact-container .contact-info .contact-links > div {
+  display: flex;
+}
+
+.contact .contact-container .contact-info .contact-links div span.icon {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #4f4f4f;
+  border-radius: 50%;
+  margin-right: 15px;
+  position: relative;
+}
+
+.contact .contact-container .contact-info .contact-links div span.icon i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact .contact-container .contact-info .contact-links > div div span {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.contact .google-map {
+  width: 100%;
+}
