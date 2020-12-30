@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing stuff</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .container{
+            display:flex;
+            flex-wrap: wrap;
+             justify-content: space-around; 
+            background-color: #111;
+            width: 90%;
+            margin: auto;
+
+        }
+
+     .container .item{
+            margin: 10px;
+            /*transition: all 1s ease;*/
+        } 
+
+        .container .item img{
+            max-width: 100%;
+            height: auto;
+            /*transition: all 1s ease;*/
+            box-shadow: 0 5px 11px 0 rgba(0,0,0,.18),
+            0 4px 15px 0 rgba(0,0,0,.15) !important;
+        }
+
+        .column{
+            flex-basis: 33.33%;      
+            transition: all .3s ease;
+        }
+
+        p{
+            color: #FFF;
+        }
+
+        @media (max-width: 768px){
+
+            .column{
+            flex-basis: 50%;      
+        }
+
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="item">
+                <div class="image"><img src="./assets/images/item1.jpg" alt="project image"></div>
+                <div class="info"><a href=""><i></i></a><a href=""><i></i></a></div>
+            </div>
+            <div class="item">
+                <div class="image"><img src="./assets/images/item2.jpg" alt=""></div>
+                <div class="info"><a href=""><i></i></a><a href=""><i></i></a></div>
+            </div>
+            <div class="item">
+                <div class="image"><img src="./assets/images/item3.jpg" alt=""></div>
+                <div class="info"><a href=""><i></i></a><a href=""><i></i></a></div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="item">
+                <div class="image"><img src="./assets/images/item9.jpg" alt=""></div>
+                <div class="info"><a href=""><i></i></a><a href=""><i></i></a></div>
+            </div>
+            <div class="item">
+                <div class="image"><img src="./assets/images/item5.jpg" alt=""></div>
+                <div class="info"><a href=""><i></i></a><a href=""><i></i></a></div>
+            </div>
+            <div class="item">
+                <div class="image"><img src="./assets/images/item6.jpg" alt=""></div>
+                <div class="info"><a href=""><i></i></a><a href=""><i></i></a></div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="item">
+                <div class="image"><img src="./assets/images/item7.jpg" alt=""></div>
+                <div class="info"><a href=""><i></i></a><a href=""><i></i></a></div>
+            </div>
+            <div class="item">
+                <div class="image"><img src="./assets/images/item8.jpg" alt=""></div>
+                <div class="info"><a href=""><i></i></a><a href=""><i></i></a></div>
+            </div>
+            <div class="item">
+                <div class="image"><img src="./assets/images/item4.jpg" alt=""></div>
+                <div class="info"><a href=""><i></i></a><a href=""><i></i></a></div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    
+    <script>
+
+
+        /* const images = document.querySelectorAll('.container .item');
+
+            images[4].style.transform = "translateY(-100px)";
+            images[5].style.transform = "translateY(-100px)";
+            images[6].style.transform = "translateY(-100px)";
+            images[7].style.transform = "translateY(-100px)";
+            images[8].style.transform = "translateY(-200px)";
+
+
+            const heightOutput = document.querySelector('#height');
+            const widthOutput = document.querySelector('#width');
+
+
+                function reportWindowSize() {
+                    heightOutput.textContent = window.innerHeight;
+                    widthOutput.textContent = window.innerWidth;
+                }
+
+                window.onresize = reportWindowSize; */
+
+    </script>
+</body>
+
+</html>

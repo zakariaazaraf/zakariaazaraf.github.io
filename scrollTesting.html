@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srcoll test</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin:0;
+        }
+        .container{
+            height: 3000px;
+            background-color: #dbdbdb;
+            position: relative;
+        }
+
+        .container div{
+            position: absolute;
+            left: 0;
+            background-color: #111;
+            height: 200px;
+            width: 200px;
+            border: 1px solid #656565;
+            border-radius: 10px;
+            transform: translate(-200px);
+            transition: all .7s ease .2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+        <div class="div6"></div>
+        <div class="div7"></div>
+        <div class="div8"></div>
+
+    </div>
+    <script>
+
+        let increase = 300;
+        const myDivs = document.querySelectorAll(".container div");
+
+        // GET THE DIVISINS'S POSTIONS
+        let postion = [];
+
+        
+
+        // POSTINING THE DEVISIONS 
+        myDivs.forEach(item =>{
+            item.style.top = increase + "px";
+            increase += 400;
+            postion.push(item.style.top);
+        });
+
+        // GET THE TOP POSTION BY CONVERTING THE STR TO NUMBER
+        myArray = [];
+        postion.forEach(item =>{
+            return myArray.push(parseInt(item.slice(0, item.indexOf('px'))) - 400);
+        });
+
+        
+        console.log(myArray);
+
+
+        document.addEventListener('scroll', () => {
+
+
+                const cordination = window.pageYOffset;
+                console.log(window.pageYOffset)
+               
+                 if(cordination > myArray[0] && cordination < myArray[1]){
+                    myDivs[0].style.transform = "translate(200px)";
+                    
+                } else if(cordination > myArray[1] && cordination < myArray[2]){
+
+                    myDivs[1].style.transform = "translate(200px)";
+
+                } else if(cordination > myArray[2] && cordination < myArray[3]){
+
+                    myDivs[2].style.transform = "translate(200px)";
+
+                } else if (cordination > myArray[3] && cordination < myArray[4]) {
+
+                     myDivs[3].style.transform = "translate(200px)";
+
+                 } else if (cordination > myArray[4] && cordination < myArray[5]) {
+
+                     myDivs[4].style.transform = "translate(200px)";
+
+                 } else if (cordination > myArray[5] && cordination < myArray[6]) {
+
+                     myDivs[5].style.transform = "translate(200px)";
+
+                 } else if (cordination > myArray[6] && cordination < myArray[7]) {
+
+                     myDivs[6].style.transform = "translate(200px)";
+
+                 } else if (cordination > myArray[7] ) {
+
+                     myDivs[7].style.transform = "translate(200px)";
+
+                 }
+
+                
+            });
+        
+    </script>
+</body>
+</html>

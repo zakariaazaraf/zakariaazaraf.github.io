@@ -444,15 +444,15 @@ p {
   position: relative;
 }
 
-.works .container-section .works-container .column {
-  flex-basis: 33.33%;
+.works .container-section .works-container > div {
+  position: absolute;
 }
 
-.works .container-section .works-container .column .item {
-  margin: 15px 10px;
+.works .container-section .works-container .item {
+  margin: 10px;
 }
 
-.works .container-section .works-container .column .item img {
+.works .container-section .works-container .item img {
   width: 100%;
   height: auto;
 }

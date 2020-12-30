@@ -65,7 +65,7 @@ media.addEventListener("change", (event) => {
 
 document.addEventListener("scroll", () => {
 
-  console.log("the page y off set " + window.pageYOffset);
+  //console.log("the page y off set " + window.pageYOffset);
   if(window.pageYOffset > 0){
     document.querySelector('nav').style.padding = "17px 50px";
     document.querySelector('nav').style.backgroundColor = "#111c";
@@ -77,18 +77,38 @@ document.addEventListener("scroll", () => {
 
 
 // SPREAD THE IMAGES CORRECTLY 
-const worksSectionWidth = document.querySelector('.works-container').width; // THE WIDTH OF THE WORK CONTAINER SECTION
 
-const images = document.querySelectorAll('.works-container .item');
+/* const worksSectionWidth = workContainer.width; // THE WIDTH OF THE WORK CONTAINER SECTION */
+
+const images = document.querySelectorAll('.works-container > div');
 
 
-images[0].style.right = "220px";
-images[0].style.top = "0";
-images[1].style.right = "-200px";
+
+
+const worksContainer = document.querySelector('.works-container');
+  worksContainer.style.minHeight = "1000px";
+
+images[0].style.left = "0";
+images[0].style.top = "0"; 
+images[1].style.left = images[0].clientWidth + "px";
 images[1].style.top = "0";
-images[2].style.left = "220px";
-images[2].style.top = "0";
 
+images[2].style.left = "0";
+images[2].style.top = images[0].clientHeight + "px";
+images[3].style.left = images[2].clientWidth + "px";
+images[3].style.top = images[1].clientHeight + "px";
+
+images[4].style.left = "0";
+images[4].style.top = images[0].clientHeight + images[2].clientHeight + "px";
+images[5].style.left = images[4].clientWidth + "px";
+images[5].style.top = images[1].clientHeight + images[3].clientHeight + "px";; 
+
+
+
+
+/* images[2].style.top = images[0].clientHeight + "px";
+images[2].style.left = "0"; */
+/*
 images[3].style.right = "200px";
 images[3].style.top = images[0].clientHeight + "px";
 images[4].style.right = "-200px";
@@ -101,38 +121,39 @@ images[6].style.top = (images[0].clientHeight + images[3].clientHeight) + "px";
 images[7].style.right = "-200px";
 images[7].style.top = (images[1].clientHeight + images[4].clientHeight) + "px";
 images[8].style.left = "200px";
-images[8].style.top = (images[2].clientHeight + images[5].clientHeight) + "px"; 
-
-
-/* images[3].style.right = "-200px";
-images[3].style.top = images[0].clientHeight + "px";
-images[6].style.left = "200px";
-images[6].style.top = (images[0].clientHeight + images[3].clientHeight) + "px"; */
+images[8].style.top = (images[2].clientHeight + images[5].clientHeight) + "px";  */
 
 
 
+/* Media Queries For Images */
+
+const smallMedia = window.matchMedia('(min-width: 568px)')
+const mediumMedia = window.matchMedia('(min-width: 786px)')
+const largeMedia = window.matchMedia('(min-width: 992px)')
+const extraLargeMedia = window.matchMedia('(min-width: 1200px)')
+
+smallMedia.addEventListener('change', (e) =>{
+  if(e.matches){
+    console.log("You're In Small Media");
+  }
+})
+
+mediumMedia.addEventListener('change', (e)=>{
+  if(e.matches){
+    console.log("Medium Media")
+  }
+})
+
+largeMedia.addEventListener('change', (e)=>{
+  e.matches ? console.log("Large Media") : ''
+})
+
+extraLargeMedia.addEventListener('change', (e)=>{
+  e.matches ? console.log("Extra Large Media") : ''
+})
 
 
 
-// SET THE ATRRIBUTE MUTED TO FALSE
-
-/* const video = document.querySelector('video');
-
-video.onloadEnd = () => {
-  console.log("the video has loaded !!!");
-}
-
-video.addEventListener('play', (e) =>{
-  console.log('the video has loaded successfuly');
-
-  setTimeout(()=>{
-    console.log("there is a possiblity to turn the sound on :) !!");
-    video.muted = false;
-    e.target.play();
-  },1000);
-  
-});
- */
 
 
 
