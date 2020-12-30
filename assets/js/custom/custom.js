@@ -85,7 +85,7 @@ const images = document.querySelectorAll('.works-container > div');
 
 
 
-const worksContainer = document.querySelector('.works-container');
+/* const worksContainer = document.querySelector('.works-container');
   worksContainer.style.minHeight = "1000px";
 
 images[0].style.left = "0";
@@ -101,7 +101,7 @@ images[3].style.top = images[1].clientHeight + "px";
 images[4].style.left = "0";
 images[4].style.top = images[0].clientHeight + images[2].clientHeight + "px";
 images[5].style.left = images[4].clientWidth + "px";
-images[5].style.top = images[1].clientHeight + images[3].clientHeight + "px";; 
+images[5].style.top = images[1].clientHeight + images[3].clientHeight + "px"; */
 
 
 

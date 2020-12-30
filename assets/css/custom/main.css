@@ -445,7 +445,7 @@ p {
 }
 
 .works .container-section .works-container > div {
-  position: absolute;
+  /* position: absolute; */
 }
 
 .works .container-section .works-container .item {
@@ -457,10 +457,15 @@ p {
   height: auto;
 }
 
-/**************** END WORKS SECTION *************/
+/*  Media Queries Width & Conatiner
+xm: <576px container width = auto
+sm: >= 576px container width = 540
+sm: >= 768px  container width = 720
+sm: >= 992px  container width = 960
+sm: >= 1200px container width = 1140 
+*/
 
-/**************** START CONTACT SECTION *************/
-.contact {
+@media (min-width: ) /**************** END WORKS SECTION *************/ /**************** START CONTACT SECTION *************/ .contact {
   /* justify-content: center; */
   flex-direction: column;
   align-items: center;
