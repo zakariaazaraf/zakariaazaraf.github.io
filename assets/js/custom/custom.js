@@ -70,7 +70,7 @@ document.addEventListener("scroll", () => {
     document.querySelector('nav').style.padding = "17px 50px";
     document.querySelector('nav').style.backgroundColor = "#111c";
   }else{
-    document.querySelector('nav').style.padding = "40px 50px";
+    document.querySelector('nav').style.padding = "20px 30px";
     document.querySelector('nav').style.backgroundColor = "transparent";
   }
 });
