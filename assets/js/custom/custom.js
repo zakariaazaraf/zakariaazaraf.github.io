@@ -67,7 +67,7 @@ document.addEventListener("scroll", () => {
 
   //console.log("the page y off set " + window.pageYOffset);
   if(window.pageYOffset > 0){
-    document.querySelector('nav').style.padding = "17px 50px";
+    document.querySelector('nav').style.padding = "20px 30px";
     document.querySelector('nav').style.backgroundColor = "#111c";
   }else{
     document.querySelector('nav').style.padding = "20px 30px";

@@ -54,6 +54,7 @@ nav ul {
   display: flex;
   list-style: none;
   margin: auto 0;
+  display: none;
 }
 
 nav ul li a {
@@ -64,17 +65,17 @@ nav ul li a {
   font-weight: 700;
 }
 
-.homeBurger {
-  width: 25px;
-  background-color: #ddd;
-  height: 2px;
-  position: relative;
-  top: 11px;
-  display: none;
-}
-
 nav .menu-icon {
   cursor: pointer;
+}
+
+.homeBurger {
+  position: relative;
+  display: block;
+  top: 11px;
+  width: 25px;
+  height: 2px;
+  background-color: #ddd;
 }
 
 .homeBurger::before {
@@ -212,17 +213,37 @@ nav .menu-icon {
   cursor: pointer;
 }
 
-/********************************************************/
+/*  Media Queries Width & Conatiner
+xm: <576px container width = auto
+sm: >= 576px container width = 540
+sm: >= 768px  container width = 720
+sm: >= 992px  container width = 960
+sm: >= 1200px container width = 1140 
+*/
 
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-  }
-
-  nav .homeBurger {
-    display: block;
+@media (min-width: 576px) {
+  .home-footer .social-medias a {
+    padding: 0 7px;
   }
 }
+
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+  }
+
+  nav .menu-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+/********************************************************/
 
 @keyframes pushIt {
   0% {
