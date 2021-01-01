@@ -48,10 +48,8 @@ const media = window.matchMedia("(max-width: 700px)");
 
 media.addEventListener("change", (event) => {
   if (event.matches) {
-    document.querySelector(".home .profil h1").style.backgroundColor = "pink";
-  } else {
-    document.querySelector(".home .profil h1").style.backgroundColor = "red";
-  }
+    
+  } 
 });
 
 /* media.addListener((event) => {
