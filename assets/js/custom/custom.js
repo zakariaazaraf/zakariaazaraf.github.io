@@ -78,51 +78,11 @@ document.addEventListener("scroll", () => {
 
 // SPREAD THE IMAGES CORRECTLY 
 
-/* const worksSectionWidth = workContainer.width; // THE WIDTH OF THE WORK CONTAINER SECTION */
-
 const images = document.querySelectorAll('.works-container > div');
+const innerImages = document.querySelectorAll('.works-container .image')
+const worksContainer = document.querySelector('.works-container')
 
-
-
-
-/* const worksContainer = document.querySelector('.works-container');
-  worksContainer.style.minHeight = "1000px";
-
-images[0].style.left = "0";
-images[0].style.top = "0"; 
-images[1].style.left = images[0].clientWidth + "px";
-images[1].style.top = "0";
-
-images[2].style.left = "0";
-images[2].style.top = images[0].clientHeight + "px";
-images[3].style.left = images[2].clientWidth + "px";
-images[3].style.top = images[1].clientHeight + "px";
-
-images[4].style.left = "0";
-images[4].style.top = images[0].clientHeight + images[2].clientHeight + "px";
-images[5].style.left = images[4].clientWidth + "px";
-images[5].style.top = images[1].clientHeight + images[3].clientHeight + "px"; */
-
-
-
-
-/* images[2].style.top = images[0].clientHeight + "px";
-images[2].style.left = "0"; */
-/*
-images[3].style.right = "200px";
-images[3].style.top = images[0].clientHeight + "px";
-images[4].style.right = "-200px";
-images[4].style.top = images[1].clientHeight + "px";
-images[5].style.left = "200px";
-images[5].style.top = images[2].clientHeight + "px"; 
-
-images[6].style.right = "200px";
-images[6].style.top = (images[0].clientHeight + images[3].clientHeight) + "px";
-images[7].style.right = "-200px";
-images[7].style.top = (images[1].clientHeight + images[4].clientHeight) + "px";
-images[8].style.left = "200px";
-images[8].style.top = (images[2].clientHeight + images[5].clientHeight) + "px";  */
-
+console.log(worksContainer)
 
 
 /* Media Queries For Images */
@@ -134,9 +94,57 @@ const extraLargeMedia = window.matchMedia('(min-width: 1200px)')
 
 smallMedia.addEventListener('change', (e) =>{
   if(e.matches){
-    console.log("You're In Small Media");
+    
+    images[0].style.transform = "translate3D(0, 0, 1)";
+    images[1].style.transform = "translate3D(50%, 0, 1)";
+    
+    images[2].style.transform = "translate3d(0, 0, 1)";
+    images[3].style.transform = "translate3d(50%, -25px, 1)";
+
+    console.log('You Are In Small Media !!!')
   }
 })
+
+
+
+
+function getWidth(arrElement){
+  let elementsWidth = []
+  arrElement.forEach(item => elementsWidth.push(item.clientWidth))
+  return elementsWidth
+}
+
+function getHeight(arrElement){
+  let elemnetsHeight = []
+  arrElement.forEach(item => elemnetsHeight.push(item.clientHeight))
+  return elemnetsHeight
+}
+
+
+// GET THE PARENT HEIGHT
+function parentHeight(arrElement){
+
+  let evenSum = 0, oddSum = 0;
+  arrElement.forEach((item, index)=>{
+    if(index % 2 === 0){
+      evenSum += item
+    }else{
+      oddSum += item
+    }
+  })
+
+  return oddSum > evenSum ? oddSum : evenSum
+}
+
+window.addEventListener('resize', ()=>{
+
+  worksContainer.style.height = parentHeight(getHeight(innerImages)) + "px";
+  worksContainer.style.position = "relative";
+  console.log(parentHeight(getHeight(innerImages)))
+
+})
+
+
 
 mediumMedia.addEventListener('change', (e)=>{
   if(e.matches){

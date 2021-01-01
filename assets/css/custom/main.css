@@ -445,7 +445,7 @@ p {
 }
 
 .works .container-section .works-container > div {
-  /* position: absolute; */
+  transition: translate3d 1s ease 0.1s;
 }
 
 .works .container-section .works-container .item {
@@ -465,7 +465,26 @@ sm: >= 992px  container width = 960
 sm: >= 1200px container width = 1140 
 */
 
-@media (min-width: ) /**************** END WORKS SECTION *************/ /**************** START CONTACT SECTION *************/ .contact {
+@media (min-width: 576px) {
+  .works .container-section .works-container > div {
+    /* position: absolute; */
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+/**************** END WORKS SECTION *************/
+
+/**************** START CONTACT SECTION *************/
+
+.contact {
   /* justify-content: center; */
   flex-direction: column;
   align-items: center;
