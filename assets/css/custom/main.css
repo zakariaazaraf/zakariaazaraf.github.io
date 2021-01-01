@@ -452,6 +452,24 @@ p {
   margin: 10px;
 }
 
+.works .container-section .works-container .item .image {
+  position: relative;
+}
+
+.works .container-section .works-container .item .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
 .works .container-section .works-container .item img {
   width: 100%;
   height: auto;
