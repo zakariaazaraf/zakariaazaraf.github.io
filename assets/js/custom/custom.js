@@ -42,6 +42,19 @@ percentages.forEach((item) => {
   item.firstElementChild.innerHTML = item.dataset.percentage;
 });
 
+
+/*
+=======================================================
+=============== TOGGLE THE ICON MENU ==================
+=======================================================
+*/
+
+const menuIcon = document.querySelector('nav .menu-icon')
+const menuList = document.querySelector('nav ul')
+$(menuIcon).click(()=>{
+  $(menuList).toggleClass('toggleMenu');
+})
+
 /******* Media query ********/
 
 const media = window.matchMedia("(max-width: 700px)");

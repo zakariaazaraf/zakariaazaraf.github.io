@@ -57,12 +57,28 @@ nav ul {
   display: none;
 }
 
+.toggleMenu {
+  position: absolute;
+  left: 0;
+  top: 77px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all 0.7s linear;
+}
+
 nav ul li a {
   color: #a6a6a6;
   text-transform: uppercase;
   padding: 0 15px;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 700;
+}
+
+nav ul li:last-child > a {
+  padding-right: 0;
 }
 
 nav .menu-icon {
@@ -140,6 +156,7 @@ nav .menu-icon {
   font-weight: 900;
   text-transform: capitalize;
   letter-spacing: 2px;
+  text-align: center; /*FOR MOBILE SCREEN, TO PREVENT TEXT TO LEFT*/
 }
 
 .home h2 {
@@ -187,7 +204,7 @@ nav .menu-icon {
 
 .home-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-basis: 10%;
   width: 100%;
@@ -196,11 +213,12 @@ nav .menu-icon {
 
 .home-footer .rigths {
   margin: 0;
+  display: none;
 }
 
 .home-footer .social-medias a {
   color: #a6a6a6;
-  padding: 0 2px;
+  padding: 0 7px;
   cursor: pointer;
 }
 
@@ -222,8 +240,12 @@ sm: >= 1200px container width = 1140
 */
 
 @media (min-width: 576px) {
-  .home-footer .social-medias a {
-    padding: 0 7px;
+  .home-footer {
+    justify-content: space-between;
+  }
+
+  .home-footer .rigths {
+    display: block;
   }
 }
 
