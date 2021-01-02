@@ -51,10 +51,21 @@ percentages.forEach((item) => {
 
 const menuIcon = document.querySelector('nav .menu-icon')
 const menuList = document.querySelector('nav ul')
+
+
 $(menuIcon).click(()=>{
-  $(menuList).toggleClass('toggleMenu');
-  
+  $(menuList).toggleClass('toggleMenu'); 
+  const listLinks = document.querySelectorAll('.toggleMenu li')
+  /* listLinks.forEach(link => {
+    link.addEventListener('click', ()=>{
+      $(menuList).toggleClass('toggleMenu');
+    })
+  }) */
 })
+
+
+
+
 
 /******* Media query ********/
 

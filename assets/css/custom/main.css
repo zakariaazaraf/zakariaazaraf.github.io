@@ -1,6 +1,8 @@
 * {
   box-sizing: border-box;
   color: #a6a6a6;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -321,16 +323,18 @@ p {
 }
 
 .about .container-section > div {
-  padding: 30px 0 60px 0;
+  padding: 30px 0;
 }
 
 .about .container-section .about-resume {
   display: flex;
+  flex-direction: column;
 }
 
 .about .container-section .about-resume .image {
-  flex-basis: 40%;
-  padding: 0 15px;
+  /* flex-basis: 40%;
+  padding: 0 15px; */
+  margin-bottom: 2rem;
 }
 
 .about .container-section .about-resume .image img {
@@ -340,8 +344,8 @@ p {
 }
 
 .about .container-section .about-resume .resume {
-  flex-basis: 60%;
-  padding: 0 15px;
+  /* flex-basis: 60%;
+  padding: 0 15px; */
 }
 
 .about .container-section .about-resume .resume h3 {
@@ -351,6 +355,8 @@ p {
 
 .about .container-section .about-resume .resume p {
   line-height: 2;
+  margin: 0;
+  letter-spacing: 0.4px;
 }
 
 .about .container-section .about-resume .resume hr {
@@ -360,9 +366,9 @@ p {
 }
 
 .about .container-section .about-resume .resume .informations {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .about .container-section .about-resume .resume .informations > div {
@@ -377,7 +383,7 @@ p {
 
 .about .container-section .about-resume .resume .buttons {
   display: flex;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .about .container-section .about-resume .resume .buttons a {
@@ -392,16 +398,18 @@ p {
 }
 
 .about .container-section .about-resume .resume .buttons a:first-child {
-  margin-right: 30px;
+  margin-right: 15px;
 }
 
 .about .container-section .career {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .about .container-section .career > div {
-  flex-basis: 50%;
+  /* flex-basis: 50%; */
+  margin: 1rem 0;
 }
 
 .about .container-section .career h2 {
@@ -412,7 +420,7 @@ p {
 
 .about .container-section .career > div div {
   position: relative;
-  padding: 0 0 50px 40px;
+  padding: 0 0 30px 30px;
 }
 
 .about .container-section .career > div div::before {
@@ -444,14 +452,15 @@ p {
 
 .about .container-section .skills {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
 }
 
 .about .container-section .skills > div {
-  flex-basis: 50%;
-  padding: 15px;
+  /* flex-basis: 50%; */
+  padding: 10px 0;
 }
 
 .about .container-section .skills div > div {
@@ -505,9 +514,10 @@ p {
 .works .container-section .works-container {
   display: flex;
   justify-content: center;
-  flex-basis: 95%;
+  /* flex-basis: 95%; */
   flex-wrap: wrap;
   position: relative;
+  padding: 0;
 }
 
 .works .container-section .works-container > div {
@@ -584,11 +594,12 @@ sm: >= 1200px container width = 1140
 .contact .contact-container {
   flex-basis: 90%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .contact .contact-container > div {
-  padding: 20px 25px;
+  /* padding: 20px 25px; */
 }
 
 .contact .contact-container .contact-form {
@@ -600,11 +611,16 @@ sm: >= 1200px container width = 1140
 
 .contact .contact-container .contact-form div:first-child {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .contact .contact-container .contact-form div:first-child > input {
-  flex-basis: 48%;
+  /* flex-basis: 48%; */
+}
+
+.contact .contact-container .contact-form div:first-child > input:first-child {
+  margin-bottom: 15px;
 }
 
 .contact .contact-container .contact-form form {
