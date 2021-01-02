@@ -53,6 +53,7 @@ const menuIcon = document.querySelector('nav .menu-icon')
 const menuList = document.querySelector('nav ul')
 $(menuIcon).click(()=>{
   $(menuList).toggleClass('toggleMenu');
+  
 })
 
 /******* Media query ********/
