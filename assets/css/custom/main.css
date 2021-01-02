@@ -653,18 +653,41 @@ sm: >= 1200px container width = 1140
 }
 
 .contact .contact-container .contact-form form input[type="submit"] {
-  width: 27%;
+  width: auto;
   height: 35px;
+  padding: 0 30px;
   border: 2px solid #a6a6a6;
   border-radius: 20px;
+  text-transform: uppercase;
 }
 
 .contact .contact-container .contact-info {
   flex-basis: 42%;
 }
 
+.contact .contact-container .contact-info > p {
+  margin-bottom: 1.5rem;
+}
+
 .contact .contact-container .contact-info .contact-links > div {
   display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.contact .contact-container .contact-info .contact-links > div:first-child a {
+  color: inherit;
+}
+
+.contact
+  .contact-container
+  .contact-info
+  .contact-links
+  > div:first-child
+  a:hover {
+  text-decoration: underline;
+}
+.contact .contact-container .contact-info .contact-links > div:last-child p {
+  text-transform: capitalize;
 }
 
 .contact .contact-container .contact-info .contact-links div span.icon {
