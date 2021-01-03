@@ -56,11 +56,24 @@ const menuList = document.querySelector('nav ul')
 $(menuIcon).click(()=>{
   $(menuList).toggleClass('toggleMenu'); 
   const listLinks = document.querySelectorAll('.toggleMenu li')
-  /* listLinks.forEach(link => {
-    link.addEventListener('click', ()=>{
-      $(menuList).toggleClass('toggleMenu');
-    })
-  }) */
+})
+
+/*
+=======================================================
+============== Form PlaceHolder events ================
+=======================================================
+*/
+
+$('[placeholder]').focus((e)=>{
+
+  $(e.target).attr('data-place', e.target.placeholder);
+  e.target.placeholder = ''
+  
+})
+  .blur((e)=>{
+     
+  e.target.placeholder = $(e.target).attr('data-place');
+  
 })
 
 
@@ -76,14 +89,6 @@ media.addEventListener("change", (event) => {
     
   } 
 });
-
-/* media.addListener((event) => {
-    if (event.matches) {
-        document.querySelector(".home .profil h1").style.backgroundColor = "pink"
-    } else {
-        document.querySelector(".home .profil h1").style.backgroundColor = "red";
-    }
-}); */
 
 
 document.addEventListener("scroll", () => {
