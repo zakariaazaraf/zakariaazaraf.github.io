@@ -332,8 +332,6 @@ p {
 }
 
 .about .container-section .about-resume .image {
-  /* flex-basis: 40%;
-  padding: 0 15px; */
   margin-bottom: 2rem;
 }
 
@@ -341,11 +339,6 @@ p {
   width: 100%;
   height: auto;
   border: solid 8px #414141;
-}
-
-.about .container-section .about-resume .resume {
-  /* flex-basis: 60%;
-  padding: 0 15px; */
 }
 
 .about .container-section .about-resume .resume h3 {
@@ -459,7 +452,6 @@ p {
 }
 
 .about .container-section .skills > div {
-  /* flex-basis: 50%; */
   padding: 10px 0;
 }
 
@@ -520,10 +512,6 @@ p {
   padding: 0;
 }
 
-.works .container-section .works-container > div {
-  transition: translate3d 1s ease 0.1s;
-}
-
 .works .container-section .works-container .item {
   margin: 10px;
 }
@@ -549,29 +537,6 @@ p {
 .works .container-section .works-container .item img {
   width: 100%;
   height: auto;
-}
-
-/*  Media Queries Width & Conatiner
-xm: <576px container width = auto
-sm: >= 576px container width = 540
-sm: >= 768px  container width = 720
-sm: >= 992px  container width = 960
-sm: >= 1200px container width = 1140 
-*/
-
-@media (min-width: 576px) {
-  .works .container-section .works-container > div {
-    /* position: absolute; */
-  }
-}
-
-@media (min-width: 768px) {
-}
-
-@media (min-width: 992px) {
-}
-
-@media (min-width: 1200px) {
 }
 
 /**************** END WORKS SECTION *************/
@@ -713,4 +678,109 @@ sm: >= 1200px container width = 1140
 
 .contact .google-map {
   width: 100%;
+}
+
+/*  Media Queries Width & Conatiner
+xm: <576px container width = auto
+sm: >= 576px container width = 540
+sm: >= 768px  container width = 720
+sm: >= 992px  container width = 960
+sm: >= 1200px container width = 1140 
+*/
+
+@media (min-width: 576px) {
+  .about .container-section {
+    flex-basis: 80%;
+  }
+
+  .works .container-section {
+    flex-basis: 80%;
+  }
+
+  .wraper .contact-container {
+    flex-basis: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .about .container-section {
+    flex-basis: 90%;
+  }
+
+  .about .container-section .about-resume {
+    flex-direction: row;
+  }
+
+  .about .container-section .about-resume .image {
+    flex-basis: 40%;
+    padding: 0 15px;
+  }
+
+  .about .container-section .about-resume .resume {
+    flex-basis: 60%;
+    padding: 0 15px;
+  }
+
+  .about .container-section .career {
+    flex-direction: row;
+  }
+
+  .about .container-section .career > div {
+    flex-basis: 50%;
+    padding: 0 15px;
+  }
+
+  .about .container-section .skills {
+    flex-direction: row;
+  }
+
+  .about .container-section .skills > div {
+    flex-basis: 50%;
+    padding: 0 15px;
+    margin: 10px auto;
+  }
+
+  .works .container-section {
+    flex-basis: 90%;
+  }
+
+  .contact .contact-container{
+    flex-direction: row
+  }
+
+  .wraper .contact-container {
+    flex-basis: 90%;
+  }
+
+  .contact .contact-container > div {
+  padding: 20px 10px;
+}
+
+.contact .contact-container .contact-info > p {
+    
+    margin-top: 1rem;
+}
+
+.contact .contact-container .contact-form {
+  flex-basis: 58%;
+}
+
+@media (min-width: 992px) {
+
+  .about .container-section .skills > div {
+    padding: 0 20px;
+    margin: 15px auto;
+  }
+
+  .contact .contact-container > div {
+    padding: 20px 25px;
+  }
+
+  .contact .contact-container .contact-info .contact-links > div {
+  
+  margin-bottom: 1.25rem;
+  }
+}
+
+@media (min-width: 1200px) {
 }

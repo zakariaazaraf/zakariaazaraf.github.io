@@ -118,11 +118,6 @@ const extraLargeMedia = window.matchMedia('(min-width: 1200px)')
 smallMedia.addEventListener('change', (e) =>{
   if(e.matches){
     
-    images[0].style.transform = "translate3D(0, 0, 1)";
-    images[1].style.transform = "translate3D(50%, 0, 1)";
-    
-    images[2].style.transform = "translate3d(0, 0, 1)";
-    images[3].style.transform = "translate3d(50%, -25px, 1)";
 
     console.log('You Are In Small Media !!!')
   }
@@ -160,9 +155,7 @@ function parentHeight(arrElement){
 }
 
 window.addEventListener('resize', ()=>{
-
-  worksContainer.style.height = parentHeight(getHeight(innerImages)) + "px";
-  worksContainer.style.position = "relative";
+  
   console.log(parentHeight(getHeight(innerImages)))
 
 })
