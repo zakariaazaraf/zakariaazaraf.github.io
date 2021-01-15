@@ -792,10 +792,6 @@ sm: >= 1200px container width = 1140
     padding: 20px 25px;
   }
 
-  .contact .contact-container .contact-info .contact-links > div {
-  
-  margin-bottom: 1.25rem;
-  }
 }
 
 @media (min-width: 1200px) {
