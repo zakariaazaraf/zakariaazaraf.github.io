@@ -305,9 +305,12 @@ p {
   background-color: #111;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.about .container-section {
+.about .container-section,
+.about .skills-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -445,28 +448,40 @@ p {
 
 .about .container-section .skills {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
-.about .container-section .skills > div {
+.about .container-section .skills .lang-skills{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+
+.about .container-section .skills .lang-skills i{
+  font-size: 8rem;
+  padding: .75rem;
+}
+
+/* .about .skills-container .skills > div {
   padding: 10px 0;
 }
 
-.about .container-section .skills div > div {
+.about .skills-container .skills div > div {
   height: 7px;
   width: 100%;
   background-color: #a6a6a6;
   border-radius: 4px;
 }
 
-.about .container-section .skills div > span {
+.about .skills-container .skills div > span {
   text-transform: uppercase;
 }
 
-.about .container-section .skills div div p {
+.about .skills-container .skills div div p {
   height: 100%;
   background-color: #424242;
   border-radius: 3px;
@@ -475,7 +490,7 @@ p {
   position: relative;
 }
 
-.about .container-section .skills div div span {
+.about .skills-container .skills div div span {
   position: absolute;
   top: -37px;
   left: 93%;
@@ -484,7 +499,7 @@ p {
   background-color: #424242;
   font-size: 14px;
   text-align: center;
-}
+} */
 
 /********************************************************/
 
@@ -730,11 +745,11 @@ sm: >= 1200px container width = 1140
     padding: 0 15px;
   }
 
-  .about .container-section .skills {
+  .about .skills-container .skills {
     flex-direction: row;
   }
 
-  .about .container-section .skills > div {
+  .about .skills-container .skills > div {
     flex-basis: 50%;
     padding: 0 15px;
     margin: 10px auto;
@@ -767,7 +782,7 @@ sm: >= 1200px container width = 1140
 
 @media (min-width: 992px) {
 
-  .about .container-section .skills > div {
+  .about .skills-container .skills > div {
     padding: 0 20px;
     margin: 15px auto;
   }
