@@ -538,13 +538,15 @@ p {
 
 .works-container .project .links > * {
   text-decoration: underline;
-  color: inherit;
   color: #fff;
   font-size: 1.2rem;
+  transition: all .3s ease;
 }
 
 .works-container .project .links > *:hover{
+  color: inherit
 }
+
 
 
 
