@@ -46,12 +46,16 @@ nav {
 
 nav > a {
   text-decoration: none;
-  color: white;
+  color: inherit;
   text-transform: capitalize;
   font-weight: 800;
   font-size: 30px;
   line-height: 1.25;
   cursor: pointer;
+}
+
+nav > a:first-of-type:hover {
+  color: #fff
 }
 
 nav > a:hover {
