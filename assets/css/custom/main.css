@@ -529,14 +529,21 @@ p {
 }
 
 .works-container .project {
-  /* background-color: #ddd;
-  color: #111; */
   margin: 1rem 0;
 }
 
-
 .works-container .project img {
   width: 100%;
+}
+
+.works-container .project .links > * {
+  text-decoration: underline;
+  color: inherit;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.works-container .project .links > *:hover{
 }
 
 
