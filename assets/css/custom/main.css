@@ -529,14 +529,11 @@ p {
 }
 
 .works-container .project {
-  background-color: #ddd;
-  color: #111;
+  /* background-color: #ddd;
+  color: #111; */
   margin: 1rem 0;
 }
 
-.works-container .project .details > *{
-  color: #111 ;
-}
 
 .works-container .project img {
   width: 100%;
