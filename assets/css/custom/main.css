@@ -47,7 +47,7 @@ nav {
 nav > a {
   text-decoration: none;
   color: white;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 800;
   font-size: 30px;
   line-height: 1.25;
@@ -528,32 +528,21 @@ p {
   padding: 0;
 }
 
-.works .container-section .works-container .item {
-  margin: 10px;
+.works-container .project {
+  background-color: #ddd;
+  color: #111;
+  margin: 1rem 0;
 }
 
-.works .container-section .works-container .item .image {
-  position: relative;
+.works-container .project .details > *{
+  color: #111 ;
 }
 
-.works .container-section .works-container .item .image::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.works-container .project img {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(255, 255, 255, 0) 50%
-  );
 }
 
-.works .container-section .works-container .item img {
-  width: 100%;
-  height: auto;
-}
+
 
 /**************** END WORKS SECTION *************/
 
@@ -706,10 +695,6 @@ sm: >= 1200px container width = 1140
 
 @media (min-width: 576px) {
   .about .container-section {
-    flex-basis: 80%;
-  }
-
-  .works .container-section {
     flex-basis: 80%;
   }
 
