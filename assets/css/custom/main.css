@@ -536,8 +536,11 @@ p {
   margin: 1rem 0;
 }
 
+
 .works-container .project img {
   width: 100%;
+  height: auto;
+  border: 2px solid gray
 }
 
 .works-container .project .links > * {
