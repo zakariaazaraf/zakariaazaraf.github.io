@@ -365,11 +365,6 @@ p {
   margin: 40px 0 30px;
 }
 
-.about .container-section .about-resume .resume .informations {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
-}
 
 .about .container-section .about-resume .resume .informations > div {
   flex-basis: 50%;
@@ -416,6 +411,12 @@ p {
   font-weight: bold;
   padding: 15px 0;
   text-transform: capitalize;
+}
+
+.about .container-section  .career .experience a{
+  text-decoration: underline;
+  color: #fff;
+  transition: all .3s ease;
 }
 
 .about .container-section .career > div div {
