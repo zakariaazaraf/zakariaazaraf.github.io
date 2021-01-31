@@ -40,8 +40,8 @@ const server = http.createServer((req, res) => {
         });
 
         let mailOptions = {
-        from: data.Email , // THE EMAIL SENDER
-        to: 'zakariabenaais@gmail.com', // THE EMAIL RECIVERS, IT COULD BE MORE THEN ONE
+        from: data.From, // THE EMAIL SENDER THAT ONE FROM THE TRANSPORT
+        to: data.Email, // THE EMAIL RECIVERS, IT COULD BE MORE THEN ONE
         subject: data.Subject,
         text: data.Message
         };
