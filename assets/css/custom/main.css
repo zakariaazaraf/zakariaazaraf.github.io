@@ -582,9 +582,7 @@ p {
   justify-content: center;
 }
 
-.contact .contact-container > div {
-  /* padding: 20px 25px; */
-}
+
 
 .contact .contact-container .contact-form {
   flex-basis: 58%;
@@ -599,9 +597,6 @@ p {
   justify-content: space-between;
 }
 
-.contact .contact-container .contact-form div:first-child > input {
-  /* flex-basis: 48%; */
-}
 
 .contact .contact-container .contact-form div:first-child > input:first-child {
   margin-bottom: 15px;
@@ -790,8 +785,4 @@ sm: >= 1200px container width = 1140
   .contact .contact-container > div {
     padding: 20px 25px;
   }
-
-}
-
-@media (min-width: 1200px) {
 }

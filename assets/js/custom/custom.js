@@ -110,9 +110,6 @@ const images = document.querySelectorAll('.works-container > div');
 const innerImages = document.querySelectorAll('.works-container .image')
 const worksContainer = document.querySelector('.works-container')
 
-console.log(worksContainer)
-
-
 /* Media Queries For Images */
 
 const smallMedia = window.matchMedia('(min-width: 568px)')
@@ -182,9 +179,58 @@ extraLargeMedia.addEventListener('change', (e)=>{
 })
 
 
+$(()=>{
+
+  $('.contact .submitMessage').click((e)=>{
+    e.preventDefault()
+    let username = '',
+        email = '',
+        subject = '',
+        message = ''
 
 
+    document.forms[0].childNodes.forEach(parent =>{
 
+      if(parent.tagName == 'DIV'){
+
+        parent.childNodes.forEach(input =>{
+
+          if(input.tagName === 'INPUT'){
+            input.name === 'userName' ? username = input.value : ''
+            input.name === 'email' ? email = input.value : ''
+            input.name === 'subject' ? subject = input.value : ''
+            
+          }else if(input.tagName === 'TEXTAREA'){
+            message = input.value
+          }
+          
+        })
+
+      }
+
+    })
+
+    // PRAPRE MY OBJECT DATA
+    let emailData = {
+      From : username,
+      Email: email,
+      Subject: subject,
+      Message: message
+    }
+
+    $.ajax({
+						type: 'POST',
+						data: JSON.stringify(emailData),
+            contentType: 'application/json',
+            url: 'http://127.0.0.1:3000',						
+            success: function(data) {
+                console.log('success');
+                console.log(data);
+            }
+        });
+
+  })
+})
 
 
 
