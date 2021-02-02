@@ -37,18 +37,17 @@ const server = http.createServer((req, res) => {
         text: data.Message
         };
 
-        let response 
-
         transporter.sendMail(mailOptions, (error, info) => {
           if (error) {
             console.log(error);
           } else {
             console.log('Email sent: ' + info.response);
-            response = info
+            
           }
         });
 
-        res.end('200')
+        res.writeHead(200, {'Content-Type': 'text/plain'})
+        res.end(JSON.stringify({mes : "email sent successfully", status : 200}))
         
         
     });
