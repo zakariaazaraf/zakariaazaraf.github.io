@@ -181,15 +181,24 @@ extraLargeMedia.addEventListener('change', (e)=>{
 
 $(()=>{
 
-  $('.contact .submitMessage').click((e)=>{
+  // SELECT FORM INPUTS
+  const formUsername = document.getElementById('formUsername')
+  const formEmail = document.getElementById('formEmail')
+  const formSubject = document.getElementById('formSubject')
+  const formMessage = document.getElementById('formMessage')
+
+
+  $('.contact #formSubmit').click((e)=>{
     e.preventDefault()
-    let username = '',
-        email = '',
-        subject = '',
-        message = ''
+    let username = formUsername.value,
+        email = formEmail.value,
+        subject = formSubject.value,
+        message = formMessage.value
+
+    console.log(username, email, subject, message)
 
 
-    document.forms[0].childNodes.forEach(parent =>{
+    /* document.forms[0].childNodes.forEach(parent =>{
 
       if(parent.tagName == 'DIV'){
 
@@ -208,7 +217,7 @@ $(()=>{
 
       }
 
-    })
+    }) */
 
     // PRAPRE MY OBJECT DATA
     let emailData = {
@@ -222,12 +231,15 @@ $(()=>{
 						type: 'POST',
 						data: JSON.stringify(emailData),
             contentType: 'application/json',
-            url: 'http://127.0.0.1:3000',						
+            url: '/',						
             success: function(data) {
-                console.log('success');
-                console.log(data);
+                
+                //console.log(data); 
+                if(data){
+
+                }
             }
-        });
+    });
 
   })
 })
