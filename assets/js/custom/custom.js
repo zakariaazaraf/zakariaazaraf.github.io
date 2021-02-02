@@ -199,24 +199,17 @@ $(()=>{
 
 
     /* document.forms[0].childNodes.forEach(parent =>{
-
       if(parent.tagName == 'DIV'){
-
         parent.childNodes.forEach(input =>{
-
           if(input.tagName === 'INPUT'){
             input.name === 'userName' ? username = input.value : ''
             input.name === 'email' ? email = input.value : ''
             input.name === 'subject' ? subject = input.value : ''
-            
           }else if(input.tagName === 'TEXTAREA'){
             message = input.value
           }
-          
         })
-
       }
-
     }) */
 
     // PRAPRE MY OBJECT DATA
@@ -235,13 +228,16 @@ $(()=>{
             success: function(data) {
                 
                 //console.log(data); 
-                if(data){
+                if(data === '200'){
                   formUsername.value = ''
                   formEmail.value = ''
                   formSubject.value = ''
                   formMessage.value = ''
                   alert('Your Email Has Been Sent Successfully !! :)')
                 }
+
+                console.log(data)
+                
             }
     });
 

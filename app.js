@@ -9,11 +9,6 @@ const port = 3000;
 
 const server = http.createServer((req, res) => {
 
- /*  if(req.method === 'post'){
-    res.write('Data Gotten')
-    res.end()
-  } */
-
   
 
  if(req.url === '/'){
@@ -27,10 +22,6 @@ const server = http.createServer((req, res) => {
         //console.log(parse(body));
         let data = JSON.parse(body)
         
-        /* console.log(data.Email)
-        console.log(data.Subject)
-        console.log(data.Message) */
-
         let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -46,14 +37,20 @@ const server = http.createServer((req, res) => {
         text: data.Message
         };
 
-        transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
+        let response 
+
+        transporter.sendMail(mailOptions, (error, info) => {
+          if (error) {
+            console.log(error);
+          } else {
+            console.log('Email sent: ' + info.response);
+            response = info
+          }
         });
-        res.end('ok');
+
+        res.end('200')
+        
+        
     });
 }
 
