@@ -195,7 +195,7 @@ $(()=>{
         subject = formSubject.value,
         message = formMessage.value
 
-    console.log(username, email, subject, message)
+    
 
 
     /* document.forms[0].childNodes.forEach(parent =>{
@@ -236,7 +236,11 @@ $(()=>{
                 
                 //console.log(data); 
                 if(data){
-
+                  formUsername.value = ''
+                  formEmail.value = ''
+                  formSubject.value = ''
+                  formMessage.value = ''
+                  alert('Your Email Has Been Sent Successfully !! :)')
                 }
             }
     });
