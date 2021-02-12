@@ -376,6 +376,14 @@ p {
   text-transform: capitalize;
 }
 
+.about .container-section .about-resume .resume .informations p a{
+  color: inherit
+}
+
+.about .container-section .about-resume .resume .informations p a:hover{
+  color: #fff
+}
+
 .about .container-section .about-resume .resume .buttons {
   display: flex;
   margin-top: 20px;
