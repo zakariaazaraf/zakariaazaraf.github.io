@@ -4,6 +4,12 @@ const path = require('path')
 const nodemailer = require('nodemailer')
 const { parse } = require('querystring');
 
+const express = require('express')
+const cors = require('cors')
+const app = express()
+
+app.use(cors())
+
 const hostname = '127.0.0.1';
 const port = 3000;
 
@@ -19,9 +25,9 @@ const server = http.createServer((req, res) => {
         body += chunk.toString();
     });
     req.on('end', () => {
-        //console.log(parse(body));
-        let data = JSON.parse(body)
         
+        let data = JSON.parse(body)
+        console.log(data)
         let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -31,10 +37,10 @@ const server = http.createServer((req, res) => {
         });
 
         let mailOptions = {
-        from: data.From, // THE EMAIL SENDER THAT ONE FROM THE TRANSPORT
-        to: data.Email, // THE EMAIL RECIVERS, IT COULD BE MORE THEN ONE
+        from: data.Email, // THE EMAIL SENDER THAT ONE FROM THE TRANSPORT
+        to: 'zakariabenaais@gmail.com',  /* THE EMAIL RECIVERS, IT COULD BE MORE THEN ONE*/
         subject: data.Subject,
-        text: data.Message
+        text: `${data.Message} From ${data.From} Email: ${data.Email}`
         };
 
         transporter.sendMail(mailOptions, (error, info) => {

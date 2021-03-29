@@ -76,10 +76,6 @@ $('[placeholder]').focus((e)=>{
   
 })
 
-
-
-
-
 /******* Media query ********/
 
 const media = window.matchMedia("(max-width: 700px)");
@@ -120,8 +116,6 @@ const extraLargeMedia = window.matchMedia('(min-width: 1200px)')
 smallMedia.addEventListener('change', (e) =>{
   if(e.matches){
     
-
-    console.log('You Are In Small Media !!!')
   }
 })
 
@@ -209,15 +203,22 @@ $(()=>{
             contentType: 'application/json',
             url: '/',						
             success: function(data) {            
-                //console.log(data); 
-                /* if(data === '200'){
+                
+                const {mes, status} = JSON.parse(data)
+
+                if(status == '200'){
+
+                  alert('Your Email Has Been Sent Successfully !! :)')
+                  formUsername.placeholder = formUsername.getAttribute('data-place').value || 'Name*'
+                  formEmail.placeholder = formEmail.getAttribute('data-place').value || 'Email Adress*'
+                  formSubject.placeholder = formSubject.getAttribute('data-place').value || 'Subject*'
+                  formMessage.placeholder = formMessage.getAttribute('data-place').value || 'Message*'
+
                   formUsername.value = ''
                   formEmail.value = ''
                   formSubject.value = ''
                   formMessage.value = ''
-                  alert('Your Email Has Been Sent Successfully !! :)')
-                } */
-                console.log(data)
+                }
                 
             }
     });
