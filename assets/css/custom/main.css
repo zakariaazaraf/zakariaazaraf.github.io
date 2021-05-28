@@ -549,7 +549,9 @@ p {
 .works-container .project img {
   width: 100%;
   height: auto;
-  border: 2px solid gray
+  border: 1px solid gray;
+  border-radius: 4px;
+
 }
 
 .works-container .project .links > * {
